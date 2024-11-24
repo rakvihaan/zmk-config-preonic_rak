@@ -1,2 +1,3 @@
 config SHIELD_PREONIC_RAK
     def_bool $(shields_list_contains,preonic_rak)
+    select SPI

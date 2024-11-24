@@ -1,7 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
-&xiao_serial { status = "disabled"; };
 
 &xiao_spi {
 	status = "okay";
@@ -23,7 +22,7 @@
         zmk,matrix_transform = &transform;
     };
 
-    kscan: kscan {
+    kscan: kscan_0 {
         compatible = "zmk,kscan-gpio-matrix";
         label = "deafult_kscan";
         diode-direction = "row2col";

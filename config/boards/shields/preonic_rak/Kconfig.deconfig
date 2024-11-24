@@ -1,0 +1,6 @@
+if SHIELD_PREONIC_RAK
+
+config ZMK_KEYBOARD_NAME
+    default "preonic_rak"
+
+endif

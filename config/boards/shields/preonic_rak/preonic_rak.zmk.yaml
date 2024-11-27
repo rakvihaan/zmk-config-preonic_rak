@@ -1,0 +1,10 @@
+file_format: "1"
+id: preonic_rak
+name: preonic_rak
+type: shield
+url: https://github.com/rakvihaan
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - preonic_rak

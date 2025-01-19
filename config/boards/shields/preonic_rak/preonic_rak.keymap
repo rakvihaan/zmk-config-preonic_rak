@@ -6,6 +6,10 @@
 #define LOWER   1
 #define RAISE   2
 
+&soft_off {
+    hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -39,21 +43,21 @@
 
         layer_5 {
             bindings = <
-&kp GRAVE  &kp F1          &kp F2        &kp F3      &kp F4      &kp F5   &kp F6   &kp F7  &kp F8  &kp F9           &kp F10          &kp DELETE
-&trans     &trans          &trans        &trans      &trans      &kp F11  &kp F12  &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans     &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4   &trans   &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&kp LSHFT  &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT  &bt BT_CLR  &trans   &trans   &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans     &trans          &trans        &trans      &trans      &trans   &trans   &trans  &trans  &kp KP_NUMBER_0  &kp DOT          &kp ENTER
+&kp GRAVE  &kp F1          &kp F2        &kp F3        &kp F4        &kp F5        &kp F6   &kp F7  &kp F8  &kp F9           &kp F10          &kp DELETE
+&soft_off     &trans          &trans        &trans        &trans        &kp F11       &kp F12  &trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans     &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans   &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&kp LSHFT  &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT    &bt BT_CLR    &trans        &trans   &trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans     &trans          &trans        &trans        &trans        &trans        &trans   &trans  &trans  &kp KP_NUMBER_0  &kp DOT          &kp ENTER
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AL_SELECT_TASK  &kp C_AL_FILE_BROWSER  &trans  &trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp K_MUTE  &trans
-&trans  &trans                &trans                &trans                &trans                 &trans  &trans  &trans          &trans            &trans      &kp INS     &kp HOME
-&trans  &trans                &trans                &trans                &trans                 &trans  &trans  &trans          &trans            &trans      &trans      &kp PG_UP
-&trans  &trans                &trans                &trans                &trans                 &trans  &trans  &trans          &trans            &trans      &trans      &kp PAGE_DOWN
-&trans  &trans                &trans                &trans                &trans                 &trans  &trans  &trans          &trans            &trans      &trans      &trans
+&trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_AL_TASK_MANAGER  &kp C_AL_FILES  &trans  &trans  &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp C_MUTE  &trans
+&trans  &trans                &trans                &trans                 &trans          &trans  &trans  &trans          &trans            &trans      &kp INS     &kp HOME
+&trans  &trans                &trans                &trans                 &trans          &trans  &trans  &trans          &trans            &trans      &trans      &kp PG_UP
+&trans  &trans                &trans                &trans                 &trans          &trans  &trans  &trans          &trans            &trans      &trans      &kp PAGE_DOWN
+&trans  &trans                &trans                &trans                 &trans          &trans  &trans  &trans          &trans            &trans      &trans      &trans
             >;
         };
     };
